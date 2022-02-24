@@ -19,11 +19,11 @@ app.on('ready', () => {
     mainWindow = null;
   });
 
-  const createClipping = globalShortcut.register('CommandOrControl+!', () => {
+  const createClipping = globalShortcut.register('CommandOrControl+`', () => {
     mainWindow.webContents.send('create-new-clipping');
   });
 
-  const writeClipping = globalShortcut.register('CmdOrCtrl+Alt+@', () => {
+  const writeClipping = globalShortcut.register('CmdOrCtrl+1', () => {
     mainWindow.webContents.send('write-to-clipboard');
   });
 
