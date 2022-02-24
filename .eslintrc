@@ -4,29 +4,30 @@
     "node": true,
     "mocha": true
   },
-
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": 2017,
     "sourceType": "module",
     "ecmaFeatures": {
-        "jsx": true
+      "jsx": true
     }
   },
-
   "extends": [
     "eslint:recommended",
     "plugin:import/errors",
     "plugin:import/warnings"
   ],
-
   "rules": {
-    "comma-dangle": ["error", {
-      "arrays": "only-multiline",
-      "objects": "only-multiline",
-      "imports": "only-multiline",
-      "exports": "only-multiline",
-      "functions": "only-multiline"
-    }],
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "only-multiline",
+        "objects": "only-multiline",
+        "imports": "only-multiline",
+        "exports": "only-multiline",
+        "functions": "only-multiline"
+      }
+    ],
     "no-console": "off"
   }
 }

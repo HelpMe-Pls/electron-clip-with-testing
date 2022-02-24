@@ -42,32 +42,22 @@ describe('Electron Clip', function () {
 		return assert.equal(devToolsIsOpened, false);
 	});
 
-	it.skip('has a button with the text "Copy from Clipboard"', async () => {
-		// We'll do this one together.
-	});
+	it.skip('has a button with the text "Copy from Clipboard"', async () => {});
 
-	it.skip('should not have any clippings when the application starts up', async () => {
-		// We'll do this one together.
-	});
+	it.skip('should not have any clippings when the application starts up', async () => {});
 
 	it.skip('should have one clipping when the "Copy From Clipboard" button has been pressed', async () => {
 		/*
-		 * Independent Exercise!
-		 *
 		 * - Click on the #copy-from-clipboard button.
 		 * - Verify that there is now one .clippings-list-item element
 		 *   on the page.
 		 */
 	});
 
-	it.skip('should successfully remove a clipping', async () => {
-		// We'll do this one together.
-	});
+	it.skip('should successfully remove a clipping', async () => {});
 
 	it.skip('should have the correct text in a new clipping', async () => {
 		/*
-		 * Independent Exercise!
-		 *
 		 * - Write a test that adds some text to the system clipboard.
 		 * - Click on the "Copy to Clipboard" button.
 		 * - Get the text from the .clipping-text element.
@@ -81,8 +71,6 @@ describe('Electron Clip', function () {
 
 	it.skip('it should write the text of the clipping to the clipboard', async () => {
 		/*
-		 * Independent Exercise!
-		 *
 		 * In this test, we want to make sure that Clipmaster replaces whatever is
 		 * already on a the clipboard. We'll implement the following steps.
 		 *
@@ -93,7 +81,6 @@ describe('Electron Clip', function () {
 		 *   the first string to Clipmaster
 		 * - Assert that the clipboard currently contains that first string using
 		 *   `app.electron.clipboard.readText()`.
-		 *
 		 */
 	});
 });
