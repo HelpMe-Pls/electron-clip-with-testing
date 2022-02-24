@@ -1,7 +1,5 @@
 const { app, BrowserWindow, globalShortcut } = require('electron');
 
-console.log('main process', process.type);
-
 let mainWindow;
 
 app.on('ready', () => {
