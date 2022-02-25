@@ -3,7 +3,7 @@
 Inspired by the instructions from [this course](https://frontendmasters.com/courses/electron-v2/)
 
 ## Usage
-This project has its built version as a desktop app (only available on Windows, for now), which you can download and extract the [source code](https://github.com/HelpMe-Pls/electron-clip-with-testing/releases/tag/v1.0.0) then find the executable app in folder `electron-clip-with-testing/build/Electron Clip-win32-x64/Electron Clip.exe`.
+This project has its built version as a desktop app (only available on Windows, for now), which you can download and extract the [source code](https://github.com/HelpMe-Pls/electron-clip-with-testing/releases/tag/v1.0.0) then find the executable app in folder `electron-clip-with-testing-1.0.0/build/Electron Clip-win32-x64/Electron Clip.exe`.
 
 The project functionality is to read from and write to the system's [clipboard](https://docs.microsoft.com/en-us/windows/win32/dataxchg/about-the-clipboard)
 
