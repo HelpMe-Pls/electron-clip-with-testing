@@ -7,7 +7,7 @@ This project has its built version as a desktop app (only available on Windows, 
 
 The project functionality is to read from and write to the system's [clipboard](https://docs.microsoft.com/en-us/windows/win32/dataxchg/about-the-clipboard)
 
-The project also serves as a server to log crash reports from [electron-markdown](https://github.com/HelpMe-Pls/electron_markdown#readme). 
+The project also serves as a server to log crash reports from [electron_markdown](https://github.com/HelpMe-Pls/electron_markdown#readme). 
 ## Installation
 
 If you want to run the project in **dev mode**, make sure to have the same environment as I do to get it working properly. Please download and install these 2 softwares if you don't have them already:
