@@ -23,6 +23,7 @@ Then open up your terminal with Admin privilege and run:
 6. `cd electron-clip-with-testing`
 7. `npm i`
 8. `npm start`
-9. If you want to run this project as a server, you'll have to run the [electron_markdown](https://github.com/HelpMe-Pls/electron_markdown#readme) first, then from the same terminal that you've been using for **this** project, hit `Ctrl+C`, then `npm run report`
-10. Within the running instance of Markdown Utils, hit `Ctrl+Shift+I` then switch to the **Console** tab from the Devtools, type in `process.crash()`
-11. Then switch back to this project's folder, you should see your crash report in the `crashes` folder.
+9. If you want to run the tests (which you can find in `test\spec.js`), hit `Ctrl+C` then `npm run test`
+10. If you want to run this project as a server, you'll have to run the [electron_markdown](https://github.com/HelpMe-Pls/electron_markdown#readme) first, then from the same terminal that you've been using for **this** project, hit `Ctrl+C`, then `npm run report`
+11. Within the running instance of Markdown Utils, hit `Ctrl+Shift+I` then switch to the **Console** tab from the Devtools, type in `process.crash()`
+12. Then switch back to this project's folder, you should see your crash report in the `crashes` folder.
