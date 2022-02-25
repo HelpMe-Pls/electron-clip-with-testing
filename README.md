@@ -5,7 +5,7 @@ Inspired by the instructions from [this course](https://frontendmasters.com/cour
 ## Usage
 This project has its built version as a desktop app (only available on Windows, for now), which you can download and extract the [source code](https://github.com/HelpMe-Pls/electron-clip-with-testing/releases/tag/v1.0.0) then find the executable app in folder `electron-clip-with-testing/build/Electron Clip-win32-x64/Electron Clip.exe`.
 
-The project functionality is to read from and write to the Windows [clipboard](https://docs.microsoft.com/en-us/windows/win32/dataxchg/about-the-clipboard)
+The project functionality is to read from and write to the system's [clipboard](https://docs.microsoft.com/en-us/windows/win32/dataxchg/about-the-clipboard)
 
 The project also serves as a server to log crash reports from [electron-markdown](https://github.com/HelpMe-Pls/electron_markdown#readme). 
 ## Installation
