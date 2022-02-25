@@ -4,68 +4,69 @@ const clippingsList = document.getElementById('clippings-list');
 const copyFromClipboardButton = document.getElementById('copy-from-clipboard');
 
 ipcRenderer.on('create-new-clipping', () => {
-  addClippingToList();
-  new Notification('Clipping Added', {
-    body: `${clipboard.readText()}`,
-  });
+	addClippingToList();
+	new Notification('Clipping Added', {
+		body: `${clipboard.readText()}`,
+	});
 });
 
 ipcRenderer.on('write-to-clipboard', () => {
-  const clipping = clippingsList.firstChild;
-  writeToClipboard(getClippingText(clipping));
-  new Notification('Clipping Copied', {
-    body: `${clipboard.readText()}`,
-  });
+	const clipping = clippingsList.firstChild;
+	writeToClipboard(getClippingText(clipping));
+	new Notification('Clipping Copied', {
+		body: `${clipboard.readText()}`,
+	});
 });
 
-const createClippingElement = clippingText => {
-  const clippingElement = document.createElement('article');
+const createClippingElement = (clippingText) => {
+	const clippingElement = document.createElement('article');
 
-  clippingElement.classList.add('clippings-list-item');
+	clippingElement.classList.add('clippings-list-item');
 
-  clippingElement.innerHTML = `
+	clippingElement.innerHTML = `
     <div class="clipping-text" disabled="true"></div>
     <div class="clipping-controls">
-      <button class="copy-clipping">&rarr; Clipboard</button>
+      <button class="copy-clipping">Write to System's Clipboard &rarr; </button>
       <button class="remove-clipping">Remove</button>
     </div>
   `;
 
-  clippingElement.querySelector('.clipping-text').innerText = clippingText;
+	clippingElement.querySelector('.clipping-text').innerText = clippingText;
 
-  return clippingElement;
+	return clippingElement;
 };
 
 const addClippingToList = () => {
-  const clippingText = clipboard.readText();
-  const clippingElement = createClippingElement(clippingText);
-  clippingsList.prepend(clippingElement);
+	const clippingText = clipboard.readText();
+	const clippingElement = createClippingElement(clippingText);
+	clippingsList.prepend(clippingElement);
 };
 
 copyFromClipboardButton.addEventListener('click', addClippingToList);
 
-clippingsList.addEventListener('click', event => {
-  const hasClass = className => event.target.classList.contains(className);
+clippingsList.addEventListener('click', (event) => {
+	const hasClass = (className) => event.target.classList.contains(className);
 
-  const clippingListItem = getButtonParent(event);
+	const clippingListItem = getButtonParent(event);
 
-  if (hasClass('remove-clipping')) removeClipping(clippingListItem);
-  if (hasClass('copy-clipping'))
-  {writeToClipboard(getClippingText(clippingListItem));}
+	if (hasClass('remove-clipping')) removeClipping(clippingListItem);
+	if (hasClass('copy-clipping')) {
+		writeToClipboard(getClippingText(clippingListItem));
+	}
 });
 
-const removeClipping = target => {
-  target.remove();
+const removeClipping = (target) => {
+	target.remove();
 };
 
-const writeToClipboard = clippingText => {
-  clipboard.writeText(clippingText);
+const writeToClipboard = (clippingText) => {
+	clipboard.writeText(clippingText);
 };
 
 const getButtonParent = ({ target }) => {
-  return target.parentNode.parentNode;
+	return target.parentNode.parentNode;
 };
 
-const getClippingText = clippingListItem => {
-  return clippingListItem.querySelector('.clipping-text').innerText;
+const getClippingText = (clippingListItem) => {
+	return clippingListItem.querySelector('.clipping-text').innerText;
 };
